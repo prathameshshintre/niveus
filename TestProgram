@@ -9,7 +9,7 @@ public class DemoController {
 	@GetMapping("/hello")
 	public String gitDemo()
 	{
-		return "Hello World";
+		return "Welcome to Niveus Solutions.";
 	}
 }
 
