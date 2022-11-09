@@ -1,41 +1,13 @@
 package com.niveus.crud.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+public class EmpEntityRequest {
 
-@Entity
-@Table(name="emp_mast")
-public class EmpEntity {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int empId;
-	@Column(name="emp_name")
 	public String empName;
-	
-	@Column(name="emp_designation")
 	public String empDesignation;
-	
-	@Column(name="emp_department")
 	public String empDepartment;
-	
-	@Column(name="emp_email_id")	
 	public String empEmailId;
 	
-	public EmpEntity() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public EmpEntity(String empName, String empDesignation, String empDepartment, String empEmailId) {
-		super();
-		this.empName = empName;
-		this.empDesignation = empDesignation;
-		this.empDepartment = empDepartment;
-		this.empEmailId = empEmailId;
-	}
 	
 	public int getEmpId() {
 		return empId;
@@ -69,4 +41,5 @@ public class EmpEntity {
 	}
 	
 	
+
 }

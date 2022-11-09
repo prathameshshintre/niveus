@@ -5,7 +5,9 @@ import org.springframework.stereotype.Repository;
 import com.niveus.crud.entity.EmpEntity;
 
 @Repository
-public interface EmpRepository extends JpaRepository<EmpEntity, String>{
+public interface EmpRepository extends JpaRepository<EmpEntity, Integer>{
 	
+	
+	 
 
 }
