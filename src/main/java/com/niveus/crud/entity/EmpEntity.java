@@ -12,22 +12,21 @@ import javax.persistence.Table;
 public class EmpEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public int empId;
+	private int empId;
 	@Column(name="emp_name")
-	public String empName;
+	private String empName;
 	
 	@Column(name="emp_designation")
-	public String empDesignation;
+	private String empDesignation;
 	
 	@Column(name="emp_department")
-	public String empDepartment;
+	private String empDepartment;
 	
 	@Column(name="emp_email_id")	
-	public String empEmailId;
+	private String empEmailId;
 	
 	public EmpEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public EmpEntity(String empName, String empDesignation, String empDepartment, String empEmailId) {
 		super();

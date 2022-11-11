@@ -45,7 +45,7 @@ public class CrudController {
 		response.setList(li);
 		response.setMessage("Record inserted");
 		
-		return new ResponseEntity<EmpEntityReponse>(response,HttpStatus.CREATED);
+		return new ResponseEntity<>(response,HttpStatus.CREATED);
 		
 	}
 	
@@ -60,25 +60,24 @@ public class CrudController {
 		response.setList(li);
 		response.setMessage("");
 		
-		return new ResponseEntity<EmpEntityReponse>(response,HttpStatus.CREATED);
+		return new ResponseEntity<>(response,HttpStatus.CREATED);
 	}
 	
 	@GetMapping(value="/selectAll")
 	public ResponseEntity<EmpEntityReponse> getAllData()  
 	{
-		List<EmpEntity> li=new ArrayList();
+		List<EmpEntity> li=null;
 		EmpEntityReponse response=new EmpEntityReponse();
 		 li=this.repo.findAll();
 		response.setList(li);
 		response.setMessage("");
 		
-		return new ResponseEntity<EmpEntityReponse>(response,HttpStatus.OK);
+		return new ResponseEntity<>(response,HttpStatus.OK);
 	}
 	
 	@PutMapping(value= "/update")
 	public ResponseEntity<EmpEntityReponse> updateData(@RequestBody EmpEntityRequest request)
 	{
-		ArrayList<EmpEntity> li=new ArrayList<>();
 		ArrayList<EmpEntity> newList=new ArrayList<>();
 		EmpEntityReponse response=new EmpEntityReponse();
 		EmpEntity savedEntity=new EmpEntity();
@@ -95,27 +94,27 @@ public class CrudController {
 		else
 		{
 			response.setMessage("Record NotFound");
-			return new ResponseEntity<EmpEntityReponse>(response,HttpStatus.OK);
+			return new ResponseEntity<>(response,HttpStatus.OK);
 		}
 		savedEntity=this.repo.save(savedEntity);
 		newList.add(savedEntity);
 		response.setList(newList);
 		response.setMessage("Record Updated");
-		return new ResponseEntity<EmpEntityReponse>(response,HttpStatus.OK);
+		return new ResponseEntity<>(response,HttpStatus.OK);
 		
 	}
 	
 	@DeleteMapping(value= "/delete")
 	public ResponseEntity<EmpEntityReponse> deleteData(@RequestBody EmpEntityRequest request)
 	{
-		List<EmpEntity> newList=new ArrayList();
+		List<EmpEntity> newList=null;
 		EmpEntityReponse response=new EmpEntityReponse();
 		int empId=request.getEmpId();
 			this.repo.deleteById(empId);
 			 newList=this.repo.findAll();
 			response.setList(newList);
 		response.setMessage("Record Deleted");
-		return new ResponseEntity<EmpEntityReponse>(response,HttpStatus.OK);
+		return new ResponseEntity<>(response,HttpStatus.OK);
 		
 	}
 }

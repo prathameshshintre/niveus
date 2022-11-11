@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+	name: curd
+	namespace: niveus
+spec: 
+   selector:
+     matchLabels:
+    app: curd
+  template:
+    metadata:
+    labels:
+      app: curd
+  spec:
+    containers:
+    - name: curd
+      image:
+      env:
+      - name:
+        value:
+    ports:
+    - containerPort:   	

@@ -4,8 +4,8 @@ import java.util.List;
 
 public class EmpEntityReponse {
 
-	public String message;
-	public List<EmpEntity> list;
+	private String message;
+	private List<EmpEntity> list;
 	public String getMessage() {
 		return message;
 	}

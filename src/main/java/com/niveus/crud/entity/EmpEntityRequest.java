@@ -2,11 +2,11 @@ package com.niveus.crud.entity;
 
 public class EmpEntityRequest {
 
-	public int empId;
-	public String empName;
-	public String empDesignation;
-	public String empDepartment;
-	public String empEmailId;
+	private int empId;
+	private String empName;
+	private String empDesignation;
+	private String empDepartment;
+	private String empEmailId;
 	
 	
 	public int getEmpId() {
