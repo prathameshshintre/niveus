@@ -14,9 +14,9 @@ spec:
   spec:
     containers:
     - name: curd
-      image: niveus-image
+      image: employee-image
       env:
       - name:curd
-        value:asia-southeast1-docker.pkg.dev/secure-path-367815/pixels/niveus-image
+        value:asia-southeast1-docker.pkg.dev/secure-path-367815/pixels/employee-image
     ports:
     - containerPort: 8097  	
